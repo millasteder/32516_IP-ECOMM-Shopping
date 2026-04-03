@@ -1,38 +1,46 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <header class="header">
-  <div class="headerInner">
-    <div>
-      <h1 class="logo">Shopping Cart</h1>
-      <p class="sub">Single-page cart with DB CRUD</p>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
 
-    <div class="headerRight">
-      <div class="pill" id="cartPill">Cart • 0 items</div>
-      <button class="btn danger" id="clearCartBtn" type="button">Clear cart</button>
-    </div>
-  </div>
-</header>
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
 
-  <main class="layout">
-    <section>
-      <h2>Products</h2>
-      <div id="products" class="grid"></div>
-    </section>
+  <body>
+    <!-- Sticky header with cart summary -->
+    <header class="header">
+      <div class="headerInner">
+        <div>
+          <h1 class="logo">Shopping Cart</h1>
+          <p class="sub">Single-page cart with DB CRUD</p>
+        </div>
 
-    <aside class="cart">
-  <h2>Cart</h2>
-  <div id="cartContent"></div>
-</aside>
-  </main>
+        <div class="headerRight">
+          <div class="pill" id="cartPill">Cart • 0 items</div>
+          <button class="btn danger" id="clearCartBtn" type="button">
+            Clear cart
+          </button>
+        </div>
+      </div>
+    </header>
 
-  <script src="./app.js"></script>
-</body>
+    <main class="layout">
+      <!-- Product listing -->
+      <section class="products">
+        <h2>Products</h2>
+        <div id="products" class="grid"></div>
+      </section>
+
+      <!-- Shopping cart -->
+      <aside class="cart">
+        <h2>Cart</h2>
+        <div id="cartContent"></div>
+      </aside>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
